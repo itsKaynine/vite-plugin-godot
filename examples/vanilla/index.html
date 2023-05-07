@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <!-- NOTE: Ignore build error until vite support non module scripts -->
+    <!-- https://github.com/vitejs/vite/pull/11138 -->
+    <script src="$GODOT_JS_FILE"></script>
+    <script>
+      const GODOT_CONFIG = $GODOT_CONFIG;
+      window.engine = new Engine(GODOT_CONFIG);
+    </script>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
